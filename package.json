@@ -1,0 +1,46 @@
+{
+  "name": "quest",
+  "version": "1.0.0",
+  "description": "A small Game",
+  "main": "main.js",
+  "homepage": "yur mum",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "dist": "build"
+  },
+  "author": "Steven Kaufman <steveplaysguiola@gmail.com>",
+  "license": "MIT",
+  "build": {
+    "appId": "quest",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "squirrel",
+      "icon": "build/icon.ico"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^1.8.3",
+    "electron-builder": "^20.5.1"
+  }
+}
